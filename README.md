@@ -31,7 +31,8 @@ git clone https://github.com/sualpemre/skywardlease.git
 - Then  open a command prompt, then navigate to the location where you cloned the project using the command prompt
 
 - Then run following command on project folder location:
-  <code>docker-compose up -d --build</code>
+  
+    <code>docker-compose up -d --build</code>
 
 - Note : If you don't docker-compose installed on your machine, [👉 click](#with-wsl).
 
@@ -39,7 +40,8 @@ git clone https://github.com/sualpemre/skywardlease.git
 
 # With WSL
 - Run following command on project folder location: 
-  <code>wsl</code> 
+    
+    <code>wsl</code> 
 
 - Note : If you don't have WSL and Docker installed on your machine, [👉 click](#how-to-install-wsl-on-windows) here to learn how to install them.
 
@@ -59,20 +61,25 @@ git clone https://github.com/sualpemre/skywardlease.git
 - Windows, by default, installs WSL 1. However, we need WSL 2 to run docker containers.
 
 - Open elevated Powershell and run:
+  
     <code>dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart</code>
 
 - Then run in cmd or powershell
+  
     <code>wsl --update</code> 
 
 - after completed, set wsl version to 2 by running
+  
     <code>wsl --set-default-version 2</code>
 
 ## Install WSL Ubuntu
+    
+  - <code>wsl --install -d ubuntu</code>
 
-<code>wsl --install -d ubuntu</code>
 - Important: Save password that you set during the installation. For administrative commands, you will need to enter that password
 
 - After install, it will login into ubuntu. To check the WSL version, type exit to leave WSL and run:
+  
     <code>wsl -l -v</code>
 
 - If you see version 2, we are good to install docker into WSL
@@ -82,9 +89,11 @@ git clone https://github.com/sualpemre/skywardlease.git
 ## Install Docker to WSL
 
 - You can login to WSL Ubuntu by:
+
     <code>wsl</code>
 
 - On the very first login, run the following for security updates:
+ 
     <code>sudo apt update && sudo apt upgrade</code>
 
 - Important
@@ -99,28 +108,37 @@ git clone https://github.com/sualpemre/skywardlease.git
         software-properties-common</code>
 
 - Add Docker GPG Key
+  
     <code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg</code>
 
 - Note
 
   - If above command does not run and throws error as "Could not resolve host: download.docker.com", its because network connectivity issues [can happen](https://github.com/microsoft/WSL/issues?q=is%3Aissue+label%3Anetwork) with WSL 2, and tweaking the DNS settings often resolves these problems by running the following(skip if does not fail)
+   
     <code>echo -e "[network]\ngenerateResolvConf = false" | sudo tee -a /etc/wsl.conf sudo unlink /etc/resolv.conf echo nameserver 1.1.1.1 | sudo tee /etc/resolv.conf</code>
     
 - Add the Docker repository to your APT sources
+  
     <code>echo "deb [signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null</code>
 
 - Update the package list again
+   
     <code>sudo apt update</code>
 
 - Install the Docker engine
+  
     <code>sudo apt install -y docker-ce docker-ce-cli containerd.io</code>
 
 - when done, check the docker service status by
+   
     <code>sudo systemctl status docker</code>
+
 - or check the version
+    
     <code>docker --version</code>
 
 - Manage Docker as a Non-root User (Optional):
+   
     <code>sudo usermod -aG docker $USER 
     newgrp docker</code>
 
