@@ -40,7 +40,8 @@ git clone https://github.com/sualpemre/skywardlease.git
 
 ## Used Technologies
 
-```html
+<!-- HTML table -->
+<table>
 <tr>
 <td>Django Project<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/djangoproject.svg" width="100" title="Django Project"></td>
 <td>React<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/react.svg" width="100" title="React"></td>
@@ -48,7 +49,7 @@ git clone https://github.com/sualpemre/skywardlease.git
 <td>NGINX<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/nginx.svg" width="100" title="NGINX"></td>
 <td>Docker<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/docker.svg" width="100" title="Docker"></td>
 </tr>
-```
+</table>
 
 
 
