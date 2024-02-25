@@ -40,15 +40,15 @@ git clone https://github.com/sualpemre/skywardlease.git
 
 ## Used Technologies
 
-
+```html
 <tr>
-<td>Django Project<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/djangoproject.svg" width="100" title="Django Project"><br>428 bytes</td>
-<td>React<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/react.svg" width="100" title="React"><br>345 bytes</td>
-<td>TypeScript<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/typescript.svg" width="100" title="TypeScript"><br>603 bytes</td>
-<td>NGINX<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/nginx.svg" width="100" title="NGINX"><br>450 bytes</td>
-<td>Docker<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/docker.svg" width="100" title="Docker"><br>416 bytes</td>
+<td>Django Project<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/djangoproject.svg" width="100" title="Django Project"></td>
+<td>React<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/react.svg" width="100" title="React"></td>
+<td>TypeScript<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/typescript.svg" width="100" title="TypeScript"></td>
+<td>NGINX<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/nginx.svg" width="100" title="NGINX"></td>
+<td>Docker<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/docker.svg" width="100" title="Docker"></td>
 </tr>
-
+```
 
 
 
