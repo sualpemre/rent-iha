@@ -38,7 +38,6 @@ RUN chmod +x  $APP_HOME/entrypoint.prod.sh
 COPY ./backend/ $APP_HOME
 
 RUN chown -R app:app $APP_HOME
-RUN python manage.py collectstatic --no-input
 
 USER app
 

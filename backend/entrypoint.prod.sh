@@ -10,5 +10,10 @@ then
 
     echo "PostgreSQL started"
 fi
-
+python manage.py flush --no-input
+python manage.py collectstatic --no-input
+python manage.py makemigrations
+python manage.py migrate
+python seed/seed_create.py
+python manage.py loaddata seed/0001_Seed.json
 exec "$@"

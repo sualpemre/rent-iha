@@ -4,7 +4,7 @@ from aircraft.api.views import AircraftViewSet, PropertyViewSet
 
 router = DefaultRouter()
 
-router.register(r'aircraft', AircraftViewSet, basename='aircrafts')
+router.register(r'', AircraftViewSet, basename='aircrafts')
 router.register(r'property', PropertyViewSet, basename='properties')
 router.register(r'property/(?P<id>\d+)', AircraftViewSet, basename='property_detail')
 #router.register(r'aircraft/leased', RoleViewSet, basename='roles')

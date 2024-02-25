@@ -25,10 +25,10 @@ services:
           - 5173
         env_file:
           - .env
-  
+
     skywardlease.backend:
         container_name: ${DOCKER_REGISTRY-}skywardlease.backend
-        command: gunicorn --bind 0.0.0.0:8000 --workers 3 core.wsgi:application
+        command: "gunicorn --bind 0.0.0.0:8000 --workers 3 core.wsgi:application"
         build:
           context: .
           dockerfile: backend/Dockerfile
@@ -41,8 +41,7 @@ services:
         expose:
           - 8000
         depends_on:
-          skywardlease.database:
-            condition: service_healthy
+          - skywardlease.database
 
     nginx:
       build:
