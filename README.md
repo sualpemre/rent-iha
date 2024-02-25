@@ -66,8 +66,9 @@ git clone https://github.com/sualpemre/skywardlease.git
     <code>wsl -l -v</code>
 
 - If you see version 2, we are good to install docker into WSL
-    ![Wsl Open](assets/wsl-2.png)
     
+    ![Wsl Shell](assets/wsl-2.png)
+
 ## Install Docker to WSL
 
 - You can login to WSL Ubuntu by:
