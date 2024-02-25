@@ -39,10 +39,10 @@ git clone https://github.com/sualpemre/skywardlease.git
 
 ## Enable WSL 
         
-    Open Turn Windows features on or off and check Windows Subsystem for Linux
-    ![alt text](image.png)
+- Open Turn Windows features on or off and check Windows Subsystem for Linux
+    ![Wsl Open](assets/wsl-1.png)
 
-    On the first enablement of WSL, Windows will download required packages and will prompt to restart for completing the installation
+- On the first enablement of WSL, Windows will download required packages and will prompt to restart for completing the installation
 
 ## WSL 2
 
@@ -63,11 +63,11 @@ git clone https://github.com/sualpemre/skywardlease.git
 - Important: Save password that you set during the installation. For administrative commands, you will need to enter that password
 
 - After install, it will login into ubuntu. To check the WSL version, type exit to leave WSL and run:
-
     <code>wsl -l -v</code>
 
 - If you see version 2, we are good to install docker into WSL
-
+    ![Wsl Open](assets/wsl-2.png)
+    
 ## Install Docker to WSL
 
 - You can login to WSL Ubuntu by:
