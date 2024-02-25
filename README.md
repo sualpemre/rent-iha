@@ -110,9 +110,9 @@ wsl --set-default-version 2
 ## Install WSL Ubuntu
 ```bash
 wsl --install -d ubuntu
-```      
+```  
 
-- Important: Save password that you set during the installation. For administrative commands, you will need to enter that password
+:warning: **Note:** Save password that you set during the installation. For administrative commands, you will need to enter that password.
 
 - After install, it will login into ubuntu. To check the WSL version, type exit to leave WSL and run:
 ```bash
@@ -134,9 +134,8 @@ wsl
 ```bash
 sudo apt update && sudo apt upgrade
 ``` 
+:warning: **Note:** To avoid any potential conflicts with using WSL 2 Docker Engine, you must uninstall any previous versions of Docker Engine and CLI installed directly  through Linux distributions or Docker Desktop.
 
-- Important
-  - To avoid any potential conflicts with using WSL 2 Docker Engine, you must uninstall any previous versions of Docker Engine and CLI installed directly  through Linux distributions or Docker Desktop.
 
 - Install Dependencies(ignore temporary warnings/errors during installation)
 ```bash
