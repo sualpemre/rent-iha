@@ -49,14 +49,23 @@ git clone https://github.com/sualpemre/skywardlease.git
 ```
 
 - Then open a command prompt, navigate to the location where you cloned the project using the command prompt
+```bash
+cd skywardlease
+```
 
-- Then run following command on project folder location:
-  
-    <code>docker-compose up -d --build</code>
+- Run wsl:
+```bash
+wsl
+```
 
-- Then run following command:
-    <code>docker ps</code>
-    ![alt text](assets/dockerps.png)
+- Then run following commands on project folder location:
+```bash
+docker-compose up -d --build
+```  
+```bash
+docker ps
+```  
+![alt text](assets/dockerps.png)
 
 - Open your browser:
     - FrontEnd:
