@@ -3,20 +3,6 @@
 
 Skywardlease is a platform designed to facilitate the rental and management of Unmanned Aerial Vehicles (UAVs), also known as drones.
 
-## Table of Contents
-
-- [SkywardLease](#skywardlease)
-  - [Table of Contents](#table-of-contents)
-  - [Used Technologies](#used-technologies)
-  - [Quick Start](#quick-start)
-- [With WSL](#with-wsl)
-- [How to install WSL on windows](#how-to-install-wsl-on-windows)
-  - [Enable WSL](#enable-wsl)
-  - [WSL 2](#wsl-2)
-  - [Install WSL Ubuntu](#install-wsl-ubuntu)
-  - [Install Docker to WSL](#install-docker-to-wsl)
-  - [References](#references)
-
 ## Used Technologies
 
 <!-- HTML table -->
@@ -31,6 +17,22 @@ Skywardlease is a platform designed to facilitate the rental and management of U
 
 </tr>
 </table>
+
+## Table of Contents
+
+- [SkywardLease](#skywardlease)
+  - [Used Technologies](#used-technologies)
+  - [Table of Contents](#table-of-contents)
+  - [Quick Start](#quick-start)
+- [With WSL](#with-wsl)
+- [How to install WSL on windows](#how-to-install-wsl-on-windows)
+  - [Enable WSL](#enable-wsl)
+  - [WSL 2](#wsl-2)
+  - [Install WSL Ubuntu](#install-wsl-ubuntu)
+  - [Install Docker to WSL](#install-docker-to-wsl)
+  - [References](#references)
+
+
 
 
 ## Quick Start
