@@ -1,0 +1,39 @@
+
+version: "3.8"
+
+services:
+    skywardlease.database:
+        image: postgres:latest
+        container_name: skywardlease.database
+        restart: always
+        volumes:
+          - db_data:/var/lib/postgresql/data
+        healthcheck:
+          test: "pg_isready --username=postgres && psql --username=postgres --list"
+          timeout: 10s
+          retries: 20
+
+    skywardlease.frontend:
+        container_name: ${DOCKER_REGISTRY-}skywardlease.frontend
+        restart: always
+        env_file:
+          - .env
+        build:
+          context: frontend/
+          dockerfile: Dockerfile
+
+  
+    skywardlease.backend:
+        container_name: ${DOCKER_REGISTRY-}skywardlease.backend
+        build:
+          context: .
+          dockerfile: backend/Dockerfile
+        restart: always
+        env_file:
+          - .env
+        depends_on:
+          skywardlease.database:
+            condition: service_healthy
+
+volumes:
+  db_data:
