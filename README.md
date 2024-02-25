@@ -7,8 +7,8 @@ Skywardlease is a platform designed to facilitate the rental and management of U
 
 - [SkywardLease](#skywardlease)
   - [Table of Contents](#table-of-contents)
-  - [Quick Start](#quick-start)
   - [Used Technologies](#used-technologies)
+  - [Quick Start](#quick-start)
 - [With WSL](#with-wsl)
 - [How to install WSL on windows](#how-to-install-wsl-on-windows)
   - [Enable WSL](#enable-wsl)
@@ -17,6 +17,18 @@ Skywardlease is a platform designed to facilitate the rental and management of U
   - [Install Docker to WSL](#install-docker-to-wsl)
   - [References](#references)
 
+## Used Technologies
+
+<!-- HTML table -->
+<table>
+<tr>
+<td>Django Project<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/djangoproject.svg" width="100" title="Django Project"></td>
+<td>React<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/react.svg" width="100" title="React"></td>
+<td>TypeScript<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/typescript.svg" width="100" title="TypeScript"></td>
+<td>NGINX<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/nginx.svg" width="100" title="NGINX"></td>
+<td>Docker<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/docker.svg" width="100" title="Docker"></td>
+</tr>
+</table>
 
 
 ## Quick Start
@@ -36,23 +48,6 @@ git clone https://github.com/sualpemre/skywardlease.git
     <code>docker-compose up -d --build</code>
 
 - Note : If you don't have docker-compose installed on your machine, [👉 click](#with-wsl).
-
-
-## Used Technologies
-
-<!-- HTML table -->
-<table>
-<tr>
-<td>Django Project<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/djangoproject.svg" width="100" title="Django Project"></td>
-<td>React<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/react.svg" width="100" title="React"></td>
-<td>TypeScript<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/typescript.svg" width="100" title="TypeScript"></td>
-<td>NGINX<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/nginx.svg" width="100" title="NGINX"></td>
-<td>Docker<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/docker.svg" width="100" title="Docker"></td>
-</tr>
-</table>
-
-
-
 
 
 
