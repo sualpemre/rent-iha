@@ -34,7 +34,7 @@ Skywardlease is a platform designed to facilitate the rental and management of U
   - [WSL 2](#wsl-2)
   - [Install WSL Ubuntu](#install-wsl-ubuntu)
   - [Install Docker to WSL](#install-docker-to-wsl)
-  - [References](#references)
+- [References](#references)
 
 
 
@@ -192,7 +192,7 @@ newgrp docker
 ```   
 
 
-## References
+# References
 
 - [https://learn.microsoft.com/en-us/windows/wsl/install](https://learn.microsoft.com/en-us/windows/wsl/install)
 - [https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-3---enable-virtual-machine-feature](https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-3---enable-virtual-machine-feature)
