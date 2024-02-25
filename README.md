@@ -8,6 +8,7 @@ Skywardlease is a platform designed to facilitate the rental and management of U
 - [SkywardLease](#skywardlease)
   - [Table of Contents](#table-of-contents)
   - [Quick Start](#quick-start)
+- [With WSL](#with-wsl)
 - [How to install WSL on windows](#how-to-install-wsl-on-windows)
   - [Enable WSL](#enable-wsl)
   - [WSL 2](#wsl-2)
@@ -29,7 +30,16 @@ git clone https://github.com/sualpemre/skywardlease.git
 
 - Then  open a command prompt, then navigate to the location where you cloned the project using the command prompt
 
-- Then run : <code>wsl</code> on project folder location
+- Then run following command on project folder location:
+  <code>docker-compose up -d --build</code>
+
+- Note : If you don't docker-compose installed on your machine, [👉 click](#with-wsl).
+
+
+
+# With WSL
+- Run following command on project folder location: 
+  <code>wsl</code> 
 
 - Note : If you don't have WSL and Docker installed on your machine, [👉 click](#how-to-install-wsl-on-windows) here to learn how to install them.
 
