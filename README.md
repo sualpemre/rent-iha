@@ -53,11 +53,13 @@ git clone https://github.com/sualpemre/skywardlease.git
 cd skywardlease
 ```
 
+:warning: **Note:** If you have docker-compose your local machine go next step.
 - Run wsl:
 ```bash
 wsl
 ```
-:warning: **Note:** If you don't have docker-compose installed on your machine, [👉 click](#with-wsl).
+:warning: **Note:** If you don't have wsl installed on your machine, [👉 click](#with-wsl).
+
 
 
 - Then run following commands on wsl:
