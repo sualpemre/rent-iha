@@ -9,11 +9,14 @@ Skywardlease is a platform designed to facilitate the rental and management of U
 <table>
 <tr>
 <td>Django Project<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/djangoproject.svg" width="100" title="Django Project"></td>
+<td>Postgre SQL<br><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/postgresql-icon.png" width="100" title="Postgre SQL"></td>
 <td>React<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/react.svg" width="100" title="React"></td>
 <td>TypeScript<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/typescript.svg" width="100" title="TypeScript"></td>
-<td>NGINX<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/nginx.svg" width="100" title="NGINX"></td>
-<td>Docker<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/docker.svg" width="100" title="Docker"></td>
 <td>Tailwind CSS<br><img src="https://image.pngaaa.com/779/6447779-middle.png" width="100" height="100" title="Tailwind CSS"></td>
+<td>NGINX<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/nginx.svg" width="100" title="NGINX"></td>
+<td>Gunicorn<br><img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/gunicorn_logo_icon_170045.png" width="100" title="Gunicorn"></td>
+<td>Docker<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/docker.svg" width="100" title="Docker"></td>
+
 
 </tr>
 </table>
