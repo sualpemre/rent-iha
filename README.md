@@ -27,6 +27,8 @@ Skywardlease is a platform designed to facilitate the rental and management of U
 <td>TypeScript<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/typescript.svg" width="100" title="TypeScript"></td>
 <td>NGINX<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/nginx.svg" width="100" title="NGINX"></td>
 <td>Docker<br><img src="https://edent.github.io/SuperTinyIcons/images/svg/docker.svg" width="100" title="Docker"></td>
+<td>Tailwind CSS<br><img src="https://image.pngaaa.com/779/6447779-middle.png" width="100" height="100" title="Tailwind CSS"></td>
+
 </tr>
 </table>
 
