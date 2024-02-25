@@ -23,8 +23,6 @@ RUN addgroup --system app && adduser --system --group app
 ENV HOME=/home/app
 ENV APP_HOME=/home/app/web
 RUN mkdir $APP_HOME
-RUN mkdir $APP_HOME/staticfiles
-RUN mkdir $APP_HOME/mediafiles
 WORKDIR $APP_HOME
 
 RUN apt-get update && apt-get install -y --no-install-recommends netcat
@@ -40,6 +38,7 @@ RUN chmod +x  $APP_HOME/entrypoint.prod.sh
 COPY ./backend/ $APP_HOME
 
 RUN chown -R app:app $APP_HOME
+RUN python manage.py collectstatic --no-input
 
 USER app
 
