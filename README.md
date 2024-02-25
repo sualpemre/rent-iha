@@ -54,6 +54,16 @@ git clone https://github.com/sualpemre/skywardlease.git
   
     <code>docker-compose up -d --build</code>
 
+- Then run following command:
+    <code>docker ps</code>
+    ![alt text](assets/dockerps.png)
+
+- Open your browser:
+    - FrontEnd:
+        <code>http://localhost:1337/</code>
+    - BackEnd: 
+        <code>http://localhost:1337/api/</code>
+        
 - Note : If you don't have docker-compose installed on your machine, [👉 click](#with-wsl).
 
 
