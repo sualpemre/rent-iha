@@ -70,55 +70,48 @@ git clone https://github.com/sualpemre/skywardlease.git
 
 ## Install Docker to WSL
 
-    You can login to WSL Ubuntu by:
+- You can login to WSL Ubuntu by:
     <code>wsl</code>
 
-    On the very first login, run the following for security updates:
-
+- On the very first login, run the following for security updates:
     <code>sudo apt update && sudo apt upgrade</code>
 
-    Important
+- Important
+  - To avoid any potential conflicts with using WSL 2 Docker Engine, you must uninstall any previous versions of Docker Engine and CLI installed directly  through Linux distributions or Docker Desktop.
 
-        To avoid any potential conflicts with using WSL 2 Docker Engine, you must uninstall any previous versions of Docker Engine and CLI installed directly through Linux distributions or Docker Desktop.
+- Install Dependencies(ignore temporary warnings/errors during installation)
 
-    Install Dependencies(ignore temporary warnings/errors during installation)
+    <code>sudo apt install -y \
+        apt-transport-https \
+        ca-certificates \
+        curl \
+        software-properties-common</code>
 
-        <code>sudo apt install -y \
-            apt-transport-https \
-            ca-certificates \
-            curl \
-            software-properties-common</code>
+- Add Docker GPG Key
+    <code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg</code>
 
-    Add Docker GPG Key
+- Note
 
-        <code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg</code>
-
-        Note
-
-            If above command does not run and throws error as "Could not resolve host: download.docker.com", its because network connectivity issues [can happen](https://github.com/microsoft/WSL/issues?q=is%3Aissue+label%3Anetwork) with WSL 2, and tweaking the DNS settings often resolves these problems by running the following(skip if does not fail)
-
-            <code>echo -e "[network]\ngenerateResolvConf = false" | sudo tee -a /etc/wsl.conf sudo unlink /etc/resolv.conf echo nameserver 1.1.1.1 | sudo tee /etc/resolv.conf</code>
+  - If above command does not run and throws error as "Could not resolve host: download.docker.com", its because network connectivity issues [can happen](https://github.com/microsoft/WSL/issues?q=is%3Aissue+label%3Anetwork) with WSL 2, and tweaking the DNS settings often resolves these problems by running the following(skip if does not fail)
+    <code>echo -e "[network]\ngenerateResolvConf = false" | sudo tee -a /etc/wsl.conf sudo unlink /etc/resolv.conf echo nameserver 1.1.1.1 | sudo tee /etc/resolv.conf</code>
     
-    Add the Docker repository to your APT sources
-        <code>echo "deb [signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null</code>
+- Add the Docker repository to your APT sources
+    <code>echo "deb [signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null</code>
 
-    Update the package list again
+- Update the package list again
+    <code>sudo apt update</code>
 
-        <code>sudo apt update</code>
-    
-    Install the Docker engine
+- Install the Docker engine
+    <code>sudo apt install -y docker-ce docker-ce-cli containerd.io</code>
 
-        <code>sudo apt install -y docker-ce docker-ce-cli containerd.io</code>
+- when done, check the docker service status by
+    <code>sudo systemctl status docker</code>
+- or check the version
+    <code>docker --version</code>
 
-    when done, check the docker service status by
-        <code>sudo systemctl status docker</code>
-    or check the version
-        <code>docker --version</code>
-    
-    Manage Docker as a Non-root User (Optional):
-
-        <code>sudo usermod -aG docker $USER 
-        newgrp docker</code>
+- Manage Docker as a Non-root User (Optional):
+    <code>sudo usermod -aG docker $USER 
+    newgrp docker</code>
 
 
 ## References
