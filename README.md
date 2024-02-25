@@ -27,6 +27,8 @@ Skywardlease is a platform designed to facilitate the rental and management of U
   - [Used Technologies](#used-technologies)
   - [Table of Contents](#table-of-contents)
   - [Quick Start](#quick-start)
+- [Architecture](#architecture)
+  - [Example Database Diagram](#example-database-diagram)
 - [How to install WSL on windows](#how-to-install-wsl-on-windows)
   - [Enable WSL](#enable-wsl)
   - [WSL 2](#wsl-2)
@@ -77,6 +79,10 @@ docker ps
         <code>http://localhost:1337/api/</code>
         
 
+# Architecture
+
+## Example Database Diagram 
+![Wsl Open](assets/wsl-1.png)
 
 
 # How to install WSL on windows
