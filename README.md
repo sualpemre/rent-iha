@@ -40,7 +40,11 @@ git clone https://github.com/sualpemre/skywardlease.git
 
 ## Used Technologies
 
-    ![Django](assets/django-icon.png) ![React-TypeScript](assets/react-icon.png) ![PostgreSQL](assets/postgresql-icon.png) ![PostgreSQL](assets/ngnix-icon.png) ![PostgreSQL](assets/docker-icon.png)
+    ![Django](assets/django-icon.png) 
+    ![React-TypeScript](assets/react-icon.png) 
+    ![PostgreSQL](assets/postgresql-icon.png) 
+    ![Ngnix](assets/ngnix-icon.png) 
+    ![Docker](assets/docker-icon.png)
 
 
 # With WSL
