@@ -19,7 +19,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path(r'api/', include('aircraft.api.urls')),
+    path(r'api/aircraft/', include('aircraft.api.urls')),
     path(r'api/identity/', include('identity.api.urls')),
 ]
 

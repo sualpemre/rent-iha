@@ -32,7 +32,8 @@ function App() {
             </>
           }
         />
-      </Routes>
+    </Routes>
+    
   );
 }
 

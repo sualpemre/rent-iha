@@ -6,6 +6,20 @@ export type RegisterType = {
     password: string;
     re_password: string;
 }
+
+export type UserType = {
+    id: number;
+    email: string;
+    is_active: boolean;
+    user_id: string;
+    surname: string;
+    name: string;
+    last_login: string | null;
+    role: number;
+    created_at: string;
+    updated_at: string;
+}
+
 /*
 export type WareHouseType = {
     warehouseNumber: string;
