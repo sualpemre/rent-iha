@@ -57,8 +57,10 @@ cd skywardlease
 ```bash
 wsl
 ```
+:warning: **Note:** If you don't have docker-compose installed on your machine, [👉 click](#with-wsl).
 
-- Then run following commands on project folder location:
+
+- Then run following commands on wsl:
 ```bash
 docker-compose up -d --build
 ```  
@@ -73,7 +75,7 @@ docker ps
     - BackEnd: 
         <code>http://localhost:1337/api/</code>
         
-- Note : If you don't have docker-compose installed on your machine, [👉 click](#with-wsl).
+
 
 
 
