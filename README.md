@@ -46,30 +46,27 @@ git clone https://github.com/sualpemre/skywardlease.git
 
 ## WSL 2
 
-    Windows, by default, installs WSL 1. However, we need WSL 2 to run docker containers.
+- Windows, by default, installs WSL 1. However, we need WSL 2 to run docker containers.
 
-    - Open elevated Powershell and run:
-
+- Open elevated Powershell and run:
     <code>dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart</code>
 
-    - Then run in cmd or powershell
-    
+- Then run in cmd or powershell
     <code>wsl --update</code> 
 
-    - after completed, set wsl version to 2 by running
-
+- after completed, set wsl version to 2 by running
     <code>wsl --set-default-version 2</code>
 
 ## Install WSL Ubuntu
 
-    <code>wsl --install -d ubuntu</code>
-    Important: Save password that you set during the installation. For administrative commands, you will need to enter that password
+<code>wsl --install -d ubuntu</code>
+- Important: Save password that you set during the installation. For administrative commands, you will need to enter that password
 
-    After install, it will login into ubuntu. To check the WSL version, type exit to leave WSL and run:
+- After install, it will login into ubuntu. To check the WSL version, type exit to leave WSL and run:
 
     <code>wsl -l -v</code>
 
-    If you see version 2, we are good to install docker into WSL
+- If you see version 2, we are good to install docker into WSL
 
 ## Install Docker to WSL
 
