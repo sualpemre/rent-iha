@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from "axios";
 import { RegisterType } from "../@types/identity";
 
-const API_URL = import.meta.env.PROD ? window.origin + '/materialpicking/backend/' : 'http://localhost:8000/api';
+const API_URL = import.meta.env.PROD ? window.origin + '/api' : 'http://localhost:8000/api';
 
 
 export const Register = async (formData: RegisterType): Promise<RegisterType | null> => {
