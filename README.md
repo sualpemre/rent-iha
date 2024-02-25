@@ -1,1 +1,1 @@
-# rent-iha
+# Quick Start

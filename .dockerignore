@@ -1,0 +1,11 @@
+**/node_modules
+**/npm-debug.log
+build
+.venv
+.git
+.gitignore
+Dockerfile
+
+#backend
+gunicorn_config.py
+requirements.txt

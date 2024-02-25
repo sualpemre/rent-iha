@@ -1,0 +1,63 @@
+
+version: "3.8"
+services:
+    skywardlease.database:
+        image: postgres:latest
+        container_name: skywardlease.database
+        restart: always
+        volumes:
+          - postgres_data:/var/lib/postgresql/data
+        healthcheck:
+          test: "pg_isready --username=postgres && psql --username=postgres --list"
+          timeout: 10s
+          retries: 20
+
+    skywardlease.frontend:
+        container_name: ${DOCKER_REGISTRY-}skywardlease.frontend
+        build:
+          context: frontend/
+          dockerfile: Dockerfile
+        restart: always
+        volumes:
+          - static_volume:/home/app/web/staticfiles
+          - media_volume:/home/app/web/mediafiles
+        expose:
+          - 5173
+        env_file:
+          - .env
+  
+    skywardlease.backend:
+        container_name: ${DOCKER_REGISTRY-}skywardlease.backend
+        command: gunicorn core.wsgi:application --bind 0.0.0.0:8000
+        build:
+          context: .
+          dockerfile: backend/Dockerfile
+        volumes:
+          - static_volume:/home/app/web/staticfiles
+          - media_volume:/home/app/web/mediafiles
+        restart: always
+        env_file:
+          - .env
+        expose:
+          - 8000
+        depends_on:
+          skywardlease.database:
+            condition: service_healthy
+
+    nginx:
+      build:
+          context: .
+          dockerfile: nginx/Dockerfile
+      volumes:
+        - static_volume:/home/app/web/staticfiles
+        - media_volume:/home/app/web/mediafiles
+      ports:
+        - 1337:80
+      depends_on:
+        - skywardlease.frontend
+        - skywardlease.backend
+
+volumes:
+  postgres_data:
+  static_volume:
+  media_volume:
