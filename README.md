@@ -27,7 +27,6 @@ Skywardlease is a platform designed to facilitate the rental and management of U
   - [Used Technologies](#used-technologies)
   - [Table of Contents](#table-of-contents)
   - [Quick Start](#quick-start)
-- [With WSL](#with-wsl)
 - [How to install WSL on windows](#how-to-install-wsl-on-windows)
   - [Enable WSL](#enable-wsl)
   - [WSL 2](#wsl-2)
@@ -80,16 +79,6 @@ docker ps
 
 
 
-
-# With WSL
-- Run following command on project folder location: 
-    
-    <code>wsl</code> 
-
-- Note : If you don't have WSL and Docker installed on your machine, [👉 click](#how-to-install-wsl-on-windows) here to learn how to install them.
-
-
-
 # How to install WSL on windows
 
 ## Enable WSL 
@@ -104,26 +93,31 @@ docker ps
 - Windows, by default, installs WSL 1. However, we need WSL 2 to run docker containers.
 
 - Open elevated Powershell and run:
-  
-    <code>dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart</code>
+```bash
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```  
 
 - Then run in cmd or powershell
-  
-    <code>wsl --update</code> 
+```bash
+wsl --update
+```    
 
 - after completed, set wsl version to 2 by running
-  
-    <code>wsl --set-default-version 2</code>
+```bash
+wsl --set-default-version 2
+```  
 
 ## Install WSL Ubuntu
-    
-  - <code>wsl --install -d ubuntu</code>
+```bash
+wsl --install -d ubuntu
+```      
 
 - Important: Save password that you set during the installation. For administrative commands, you will need to enter that password
 
 - After install, it will login into ubuntu. To check the WSL version, type exit to leave WSL and run:
-  
-    <code>wsl -l -v</code>
+```bash
+wsl -l -v
+```     
 
 - If you see version 2, we are good to install docker into WSL
     
@@ -132,58 +126,65 @@ docker ps
 ## Install Docker to WSL
 
 - You can login to WSL Ubuntu by:
-
-    <code>wsl</code>
+```bash
+wsl
+``` 
 
 - On the very first login, run the following for security updates:
- 
-    <code>sudo apt update && sudo apt upgrade</code>
+```bash
+sudo apt update && sudo apt upgrade
+``` 
 
 - Important
   - To avoid any potential conflicts with using WSL 2 Docker Engine, you must uninstall any previous versions of Docker Engine and CLI installed directly  through Linux distributions or Docker Desktop.
 
 - Install Dependencies(ignore temporary warnings/errors during installation)
-
-    <code>sudo apt install -y \
+```bash
+sudo apt install -y \
         apt-transport-https \
         ca-certificates \
         curl \
-        software-properties-common</code>
+        software-properties-common
+``` 
 
 - Add Docker GPG Key
-  
-    <code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg</code>
+```bash
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+```  
 
-- Note
-
-  - If above command does not run and throws error as "Could not resolve host: download.docker.com", its because network connectivity issues [can happen](https://github.com/microsoft/WSL/issues?q=is%3Aissue+label%3Anetwork) with WSL 2, and tweaking the DNS settings often resolves these problems by running the following(skip if does not fail)
-   
-    <code>echo -e "[network]\ngenerateResolvConf = false" | sudo tee -a /etc/wsl.conf sudo unlink /etc/resolv.conf echo nameserver 1.1.1.1 | sudo tee /etc/resolv.conf</code>
+:warning: **Note:** If above command does not run and throws error as "Could not resolve host: download.docker.com", its because network connectivity issues [can happen](https://github.com/microsoft/WSL/issues?q=is%3Aissue+label%3Anetwork) with WSL 2, and tweaking the DNS settings often resolves these problems by running the following(skip if does not fail)
+```bash
+echo -e "[network]\ngenerateResolvConf = false" | sudo tee -a /etc/wsl.conf sudo unlink /etc/resolv.conf echo nameserver 1.1.1.1 | sudo tee /etc/resolv.conf
+``` 
     
 - Add the Docker repository to your APT sources
-  
-    <code>echo "deb [signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null</code>
+```bash
+echo "deb [signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+``` 
 
 - Update the package list again
-   
-    <code>sudo apt update</code>
-
+```bash
+sudo apt update
+```   
 - Install the Docker engine
-  
-    <code>sudo apt install -y docker-ce docker-ce-cli containerd.io</code>
-
+```bash
+sudo apt install -y docker-ce docker-ce-cli containerd.io
+``` 
 - when done, check the docker service status by
-   
-    <code>sudo systemctl status docker</code>
+```bash
+sudo systemctl status docker
+```   
 
 - or check the version
-    
-    <code>docker --version</code>
+```bash
+docker --version
+```     
 
 - Manage Docker as a Non-root User (Optional):
-   
-    <code>sudo usermod -aG docker $USER 
-    newgrp docker</code>
+```bash
+sudo usermod -aG docker $USER 
+newgrp docker
+```   
 
 
 ## References
