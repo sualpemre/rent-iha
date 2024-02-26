@@ -1,6 +1,6 @@
 from django.db import models
 from core.api.models import BaseModel
-from identity.api.models import User
+from identity.models import User
 
     
 class PropertyRule(BaseModel):
@@ -21,7 +21,8 @@ class Aircraft(BaseModel):
     aircraft_name = models.CharField(max_length=254, null=False)
     aircraft_description = models.CharField(max_length=1000, blank=True)
     properties = models.ManyToManyField(Property, related_name="aircrafts", blank=True)
-
+    stock_count = models.IntegerField(default=0)
+    
     class Meta:
         db_table = 'aircrafts'
         

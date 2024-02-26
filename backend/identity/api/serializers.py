@@ -4,7 +4,8 @@ from rest_framework.validators import UniqueValidator
 from django.contrib.auth.password_validation import validate_password
 from rest_framework import serializers
 from rest_framework_simplejwt.tokens import RefreshToken
-from identity.api.models import User, Role
+from identity.models import User, Role
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
 class RegisterSerializer(serializers.ModelSerializer):
     email = serializers.EmailField(
@@ -18,7 +19,7 @@ class RegisterSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = '__all__'
-        read_only_fields = ['role', 'id', 'created_at', 'updated_at', 'last_login', 'user_id', 'is_active']
+        read_only_fields = ['is_superuser', 'role', 'id', 'created_at', 'updated_at', 'last_login', 'user_id', 'is_active', 'is_staff', 'date_joined', 'groups', 'username']
         
 
     def validate(self, attrs):
@@ -41,45 +42,6 @@ class RegisterSerializer(serializers.ModelSerializer):
 
         return user
     
-    
-class LoginSerializer(serializers.Serializer):
-    email = serializers.EmailField()
-    password = serializers.CharField(max_length=128, write_only=True)
-    access = serializers.CharField(read_only=True)
-    refresh = serializers.CharField(read_only=True)
-    role = serializers.CharField(read_only=True)
-
-    def create(self, validated_date):
-        pass
-
-    def update(self, instance, validated_data):
-        pass
-
-    def validate(self, data):
-        email = data['email']
-        password = data['password']
-        user = authenticate(email=email, password=password)
-
-        if user is None:
-            raise serializers.ValidationError("Invalid login credentials")
-
-        try:
-            refresh = RefreshToken.for_user(user)
-            refresh_token = str(refresh)
-            access_token = str(refresh.access_token)
-
-            update_last_login(None, user)
-
-            validation = {
-                'access': access_token,
-                'refresh': refresh_token,
-                'email': user.email,
-                'role': user.role,
-            }
-
-            return validation
-        except AuthUser.DoesNotExist:
-            raise serializers.ValidationError("Invalid login credentials")
         
 class RoleSerializer(serializers.ModelSerializer):
     class Meta:
@@ -95,5 +57,28 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = '__all__'
         read_only_fields = ['id', 'user_id', 'is_active', 'last_login', 'created_at', 'updated_at']
+        
+
     
-    
+class LoginSerializer(TokenObtainPairSerializer):
+    def validate(self, attrs):
+        data = super(LoginSerializer, self).validate(attrs)
+        data.update({'email': self.user.email})
+        data.update({'user_id': self.user.user_id})
+        data.update({'name': self.user.name})
+        data.update({'surname': self.user.surname})
+        data.update({'role': self.user.role.role_name})
+        return data
+"""
+class RefreshSerializer(TokenRefreshSerializer):
+    def validate(self, attrs):
+        data = super(RefreshSerializer, self).validate(attrs)
+        user = self.context['request'].user
+        data.update({'email': user.email})
+        data.update({'user_id': user.user_id})
+        data.update({'name': user.name})
+        data.update({'surname': user.surname})
+        data.update({'role': user.role.role_name})
+        return data
+        
+"""

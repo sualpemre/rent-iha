@@ -72,17 +72,24 @@ docker ps
 ```  
 ![alt text](assets/dockerps.png)
 
-- Open your browser:
+- Endpoints:
     - FrontEnd:
         <code>http://localhost:1337/</code>
     - BackEnd: 
         <code>http://localhost:1337/api/</code>
         
+- Users
+  - Admin:
+    <code>email: admin@example.com - password: admin</code>
+  - Default: 
+    <code>email: default@example.com - password: default</code> 
 
 # Architecture
 
+![Wsl Open](assets/architecture.png)
+
 ## Example Database Diagram 
-![Wsl Open](assets/dbdiagram.png)
+![Wsl Open](assets/databasediagram.png)
 
 
 # How to install WSL on windows

@@ -31,11 +31,10 @@ COPY --from=builder /usr/src/app/requirements.txt .
 RUN pip install --upgrade pip
 RUN pip install --no-cache /wheels/*
 
-COPY ./backend/entrypoint.prod.sh .
+COPY ./backend/ $APP_HOME
 RUN sed -i 's/\r$//g'  $APP_HOME/entrypoint.prod.sh
 RUN chmod +x  $APP_HOME/entrypoint.prod.sh
 
-COPY ./backend/ $APP_HOME
 
 RUN chown -R app:app $APP_HOME
 
