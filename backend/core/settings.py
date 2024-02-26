@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+from datetime import timedelta
 from pathlib import Path
 import os
 
@@ -34,7 +35,7 @@ print(os.environ.get("DEBUG", default=1))
 DEBUG = bool(os.environ.get("DEBUG", default=1))
 
 ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", default="localhost 127.0.0.1 [::1]").split(" ")
-
+CORS_ORIGIN_ALLOW_ALL = True
 
 # Application definition
 
@@ -50,7 +51,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'identity.apps.IdentityConfig',
     'aircraft.apps.AircraftConfig',
-    "upload"
+    "upload",
+    'rest_framework_simplejwt.token_blacklist'
 ]
 
 
@@ -72,17 +74,13 @@ CORS_ALLOWED_ORIGINS = [
 CORS_ALLOW_CREDENTIALS = True
 
 
-from datetime import timedelta
-
-print(os.getenv('ACCESS_TOKEN_LIFETIME_MINUTE'))
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=int(os.getenv('ACCESS_TOKEN_LIFETIME_MINUTE'))),
-    'REFRESH_TOKEN_LIFETIME': timedelta(minutes=int(os.getenv('REFRESH_TOKEN_LIFETIME_MINUTE'))),
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=30),
     'ROTATE_REFRESH_TOKENS': False,
     'BLACKLIST_AFTER_ROTATION': True,
-    'UPDATE_LAST_LOGIN': True,
+    'UPDATE_LAST_LOGIN': False,
     'ALGORITHM': 'HS256',
-    'SIGNING_KEY': os.getenv('JWT_TOKEN_SECRET'),
     'VERIFYING_KEY': None,
     'AUDIENCE': None,
     'ISSUER': None,
@@ -95,31 +93,17 @@ SIMPLE_JWT = {
     'TOKEN_TYPE_CLAIM': 'token_type',
     'JTI_CLAIM': 'jti',
     'SLIDING_TOKEN_REFRESH_EXP_CLAIM': 'refresh_exp',
-    'SLIDING_TOKEN_LIFETIME': timedelta(minutes=int(os.getenv('ACCESS_TOKEN_LIFETIME_MINUTE'))),
-    'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(minutes=int(os.getenv('REFRESH_TOKEN_LIFETIME_MINUTE'))),
-    # custom
-    'AUTH_COOKIE': 'access_token',
-    # Cookie name. Enables cookies if value is set.
-    'AUTH_COOKIE_REFRESH': 'refresh_token',
-    # A string like "example.com", or None for standard domain cookie.
-    'AUTH_COOKIE_DOMAIN': None,
-    # Whether the auth cookies should be secure (https:// only).
-    'AUTH_COOKIE_SECURE': True, 
-    # Http only cookie flag.It's not fetch by javascript.
-    'AUTH_COOKIE_HTTP_ONLY': True,
-    'AUTH_COOKIE_PATH': '/',        # The path of the auth cookie.
-    # Whether to set the flag restricting cookie leaks on cross-site requests. This can be 'Lax', 'Strict', or None to disable the flag.
-    'AUTH_COOKIE_SAMESITE': "None", # TODO: Modify to Lax
+    'SLIDING_TOKEN_LIFETIME': timedelta(minutes=5),
+    'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
 
 REST_FRAMEWORK = {
-    "DEFAULT_AUTHENTICATION_CLASSES": [
-        'identity.authenticate.Authentication',
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
     ],
-
-    "DEFAULT_PERMISSION_CLASSES": [
-        'rest_framework.permissions.AllowAny',
-    ]
+        'DEFAULT_PERMISSION_CLASSES':(
+            'rest_framework.permissions.IsAuthenticated',
+    ),
 }
 
 ROOT_URLCONF = 'core.urls'
@@ -157,7 +141,7 @@ DATABASES = {
     }
 }
 
-
+AUTH_USER_MODEL = 'identity.User'
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 

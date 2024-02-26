@@ -20,24 +20,23 @@ export type UserType = {
     updated_at: string;
 }
 
-/*
-export type WareHouseType = {
-    warehouseNumber: string;
-    status: boolean;
+export interface AuthType {
+    access: string;
+    refresh: string;
+    user_id: string;
+    name: string;
+    surname: string;
+    email: string;
+    role: string;
 }
 
-
-export type FilterType = {
-    selectedStation: StationType | undefined;
-    selectedProject: ProjectType | undefined;
-    selectedTab: number;
-    setSelectedStation: (station: StationType | undefined) => void;
-    setSelectedProject: (project: ProjectType | undefined) => void;
-    setSelectedTab: (tab: number) => void;
+export type LoginType = {
+    email: string;
+    password: string;
 }
 
-export interface IFilterType {
-    filters: FilterType;
+export enum UserRole {
+    Admin = "Admin",
+    Default = "Default"
 }
 
-*/

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import IconPassword from '../../images/icon/icon-password.svg';
 import IconEmail from '../../images/icon/icon-email.svg';
 import IconUser from '../../images/icon/icon-user.svg';
@@ -9,14 +9,21 @@ import { RegisterType } from '../../@types/identity';
 import { RegisterService } from '../../services/identity';
 import Alert from '../../components/UiElements/Alert';
 import { toast } from 'react-toastify';
-import { AlertType } from '../../@types/alert';
-
+import { AuthContext } from '../../contexts/AuthContext';
 
 
 const SignUp: React.FC = () => {
 
   const [formData, setFormData] = useState<RegisterType | null>(null);
   const [alert, setAlert] = useState<{ [key: string]: string[] } | null>(null)
+  let navigate = useNavigate();
+  const authcontext = useContext(AuthContext)
+  /*
+  if (authcontext.user) {
+    toast.error("Kayıt sayfasına gitmek için lütfen önce çıkış yapın");
+    return navigate('/dashboard');
+  }*/
+  
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
     if (name !== undefined && value !== undefined) {
@@ -34,6 +41,7 @@ const SignUp: React.FC = () => {
           if (response.status === 201) {
             toast.success("Kullanıcı Kaydı Başarılı");
             setAlert(null)
+            return navigate('/signin'); 
           }
           else if (response.status === 400) {
             toast.error("Kullanıcı Kaydı Oluşturulamadı");
@@ -58,13 +66,11 @@ const SignUp: React.FC = () => {
               <p className="2xl:px-20">
                 LET YOUR FEET TOUCH THE SKY
               </p>
-
               <span className="mt-15 inline-block">
                 <img className="dark:hidden" src={Tb3} alt="Logo" />
               </span>
             </div>
           </div>
-
           <div className="w-full border-stroke dark:border-strokedark xl:w-1/2 xl:border-l-2">
             <div className="w-full p-4 sm:p-12.5 xl:p-17.5">
               <h2 className="mb-9 text-2xl font-bold text-black dark:text-white sm:text-title-xl2">
@@ -85,7 +91,6 @@ const SignUp: React.FC = () => {
                         onChange={handleInputChange}
                         className="w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 text-black outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
                       />
-
                       <span className="absolute right-4 top-4">
                         <img src={IconUser} alt="Icon User" />
                       </span>
@@ -103,14 +108,11 @@ const SignUp: React.FC = () => {
                         onChange={handleInputChange}
                         className="w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 text-black outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
                       />
-
                       <span className="absolute right-4 top-4">
                         <img src={IconUser} alt="Icon User" />
                       </span>
                     </div>
-
                   </div>
-
                 </div>
                 <div className="mb-4">
                   <label className="mb-2.5 block font-medium text-black dark:text-white">
@@ -123,9 +125,7 @@ const SignUp: React.FC = () => {
                       name="email"
                       onChange={handleInputChange}
                       className="w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 text-black outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-
                     />
-
                     <span className="absolute right-4 top-4">
                       <img src={IconEmail} alt="Icon Email" />
                     </span>
@@ -177,7 +177,7 @@ const SignUp: React.FC = () => {
                 <div className="mt-6 text-center">
                   <p>
                     Already have an account?{' '}
-                    <Link to="/auth/signin" className="text-primary">
+                    <Link to="/signin" className="text-primary">
                       Sign in
                     </Link>
                   </p>

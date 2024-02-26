@@ -6,8 +6,8 @@
             "is_active": true,
             "role_name": "Default",
             "role_description": "Default User",
-            "created_at": "2024-02-24T20:23:58Z",
-            "updated_at": "2024-02-24T20:23:58Z"
+            "created_at": "2024-02-26T09:24:37Z",
+            "updated_at": "2024-02-26T09:24:37Z"
         }
     },
     {
@@ -17,8 +17,8 @@
             "is_active": true,
             "role_name": "Admin",
             "role_description": "Admin User",
-            "created_at": "2024-02-24T20:23:58Z",
-            "updated_at": "2024-02-24T20:23:58Z"
+            "created_at": "2024-02-26T09:24:37Z",
+            "updated_at": "2024-02-26T09:24:37Z"
         }
     },
     {
@@ -29,24 +29,24 @@
             "email": "admin@example.com",
             "name": "Baykar",
             "surname": "Admin",
-            "password": "pbkdf2_sha256$600000$UTkcfSgwbuOcqQYchzaTUX$nXC3LQTE8tS5IMyOXacl8saRL21hDCJ0taK0NX1yA1Q=",
+            "password": "pbkdf2_sha256$600000$mKX6qh9NdYQBoNj9XgrF2W$TmcpHb+8Y+qQED4Zl/NCtuMvqUSbUFQcDTc52v5wspc=",
             "role_id": 2,
-            "created_at": "2024-02-24T20:23:58Z",
-            "updated_at": "2024-02-24T20:23:58Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
         "model": "identity.user",
-        "pk": 1,
+        "pk": 2,
         "fields": {
             "is_active": true,
             "email": "default@example.com",
             "name": "Baykar",
             "surname": "Default",
-            "password": "pbkdf2_sha256$600000$XhiDhqrDHftBaU9RnXkV8l$kCWfFmXDkjf5LkPmp/gDceI/7fasQEtG10YDfIc4lCA=",
+            "password": "pbkdf2_sha256$600000$lu09LIzIjVH8txUnH3pzj3$5HZkQAlCTrKpVK+IuZ4DvZceIoVUR8Drjbj8ja7mRjc=",
             "role_id": 1,
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
@@ -56,8 +56,8 @@
             "is_active": true,
             "aircraft_name": "Bayraktar Mini IHA",
             "aircraft_description": "Bayraktar Mini \u0130HA (\u0130nsans\u0131z Hava Arac\u0131), Baykar Savunma taraf\u0131ndan geli\u015ftirilen ve \u00fcretilen bir insans\u0131z hava arac\u0131d\u0131r. T\u00fcrkiye'nin milli savunma sanayiinde yerli olarak geli\u015ftirilen ve \u00fcretilen bu \u0130HA, genellikle askeri ama\u00e7lar i\u00e7in kullan\u0131lmaktad\u0131r.",
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
@@ -67,8 +67,8 @@
             "is_active": true,
             "aircraft_name": "Raven",
             "aircraft_description": "Raven, AeroVironment \u015firketi taraf\u0131ndan \u00fcretilen bir mini \u0130nsans\u0131z Hava Arac\u0131 (\u0130HA)'d\u0131r. Raven, Amerika Birle\u015fik Devletleri Silahl\u0131 Kuvvetleri ve di\u011fer baz\u0131 \u00fclkelerin askeri ve g\u00fcvenlik g\u00fc\u00e7leri taraf\u0131ndan kullan\u0131lmaktad\u0131r.",
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
@@ -78,8 +78,8 @@
             "is_active": true,
             "aircraft_name": "Skylark",
             "aircraft_description": "Skylark, bir mini insans\u0131z hava arac\u0131 (\u0130HA) sistemidir ve Elbit Systems taraf\u0131ndan geli\u015ftirilmi\u015ftir. \u0130srail Savunma Kuvvetleri ve di\u011fer \u00e7e\u015fitli \u00fclkelerin askeri ve g\u00fcvenlik birimleri taraf\u0131ndan kullan\u0131lmaktad\u0131r. Skylark, genellikle ke\u015fif, izleme, g\u00f6zetleme ve hedef belirleme gibi g\u00f6revlerde kullan\u0131lmaktad\u0131r.",
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
@@ -89,8 +89,8 @@
             "is_active": true,
             "rule_name": "\u00dcretici \u00dclke",
             "rule_description": "Hava Arac\u0131n\u0131 \u00dcreten \u00dclkenin Ad\u0131",
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
@@ -100,8 +100,8 @@
             "is_active": true,
             "rule_name": "Firma Ad\u0131",
             "rule_description": "Hava Arac\u0131n\u0131 \u00dcreten Firman\u0131n Ad\u0131",
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
@@ -111,8 +111,8 @@
             "is_active": true,
             "rule_name": "Operasyonel \u0130rtifa (m)",
             "rule_description": "Operasyonel \u0130rtifa, hava arac\u0131n\u0131n d\u00fczenli u\u00e7u\u015flar s\u0131ras\u0131nda sahip oldu\u011fu irtifad\u0131r.",
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
@@ -122,8 +122,8 @@
             "is_active": true,
             "rule_name": "U\u00e7u\u015f Menzili (km)",
             "rule_description": "U\u00e7u\u015f Menzili, bir hava arac\u0131n\u0131n belirli bir yak\u0131t miktar\u0131yla veya belirli bir pil \u015farj\u0131yla ne kadar mesafe kat edebilece\u011fini belirten bir \u00f6l\u00e7\u00fcmd\u00fcr.",
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
@@ -133,8 +133,8 @@
             "is_active": true,
             "rule_name": "U\u00e7u\u015f S\u00fcresi (dk.)",
             "rule_description": "U\u00e7u\u015f S\u00fcresi, bir hava arac\u0131n\u0131n kalk\u0131\u015ftan ini\u015fe kadar olan toplam s\u00fcresini ifade eder.",
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
@@ -144,8 +144,8 @@
             "is_active": true,
             "rule_name": "Faydal\u0131 Y\u00fckler",
             "rule_description": "Hava arac\u0131n\u0131n ta\u015f\u0131d\u0131\u011f\u0131 ve genellikle belirli bir amaca hizmet eden ekipman",
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
@@ -155,8 +155,8 @@
             "is_active": true,
             "rule_name": "\u0130ni\u015f T\u00fcr\u00fc",
             "rule_description": "\u0130ni\u015f T\u00fcr\u00fc, bir hava arac\u0131n\u0131n kalk\u0131\u015ftan sonra havaalan\u0131na geri d\u00f6n\u00fc\u015f ve yer y\u00fczeyine g\u00fcvenli bir \u015fekilde inmesi i\u00e7in kullan\u0131lan teknikleri ifade eder",
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
@@ -166,8 +166,8 @@
             "is_active": true,
             "rule_name": "Kalk\u0131\u015f T\u00fcr\u00fc",
             "rule_description": "Kalk\u0131\u015f T\u00fcr\u00fc, bir hava arac\u0131n\u0131n yer y\u00fczeyinden havalanmas\u0131 i\u00e7in kullan\u0131lan teknikleri ifade eder.",
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
@@ -177,8 +177,8 @@
             "is_active": true,
             "rule_name": "Otomatik Y\u00f6nlenen Anten Sistemi",
             "rule_description": "\u0130HA'n\u0131n u\u00e7u\u015f s\u0131ras\u0131nda s\u00fcrekli olarak ileti\u015fimde kalmas\u0131n\u0131 sa\u011flamak veya belirli bir sinyali alg\u0131lamak ve takip etmek i\u00e7in kullan\u0131l\u0131r.",
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
@@ -188,8 +188,8 @@
             "is_active": true,
             "rule_name": "GPS Ba\u011f\u0131ms\u0131zl\u0131\u011f\u0131",
             "rule_description": "GPS ba\u011f\u0131ms\u0131zl\u0131\u011f\u0131, \u0130HA'lar\u0131n GPS sinyalleri olmadan da g\u00fcvenli bir \u015fekilde u\u00e7abilece\u011fi ve g\u00f6revlerini yerine getirebilece\u011fi anlam\u0131na gelir.",
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
@@ -199,8 +199,8 @@
             "is_active": true,
             "rule_name": "Otomatik Viril, Stall Durumlar\u0131ndan Kurtarma",
             "rule_description": "Bu sistemler, hava arac\u0131n\u0131n durumunu s\u00fcrekli olarak izler ve belirli s\u0131n\u0131rlar\u0131n d\u0131\u015f\u0131na \u00e7\u0131kt\u0131\u011f\u0131nda otomatik olarak m\u00fcdahale eder.",
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
@@ -211,8 +211,8 @@
             "is_active": true,
             "property_value": "T\u00fcrkiye",
             "property_description": "",
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
@@ -223,8 +223,8 @@
             "is_active": true,
             "property_value": "ABD",
             "property_description": "",
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
@@ -235,8 +235,8 @@
             "is_active": true,
             "property_value": "\u0130srail",
             "property_description": "",
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
@@ -247,8 +247,8 @@
             "is_active": true,
             "property_value": "Baykar",
             "property_description": "",
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
@@ -259,8 +259,8 @@
             "is_active": true,
             "property_value": "Aerovironment",
             "property_description": "",
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
@@ -271,8 +271,8 @@
             "is_active": true,
             "property_value": "Elbit",
             "property_description": "",
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
@@ -283,8 +283,8 @@
             "is_active": true,
             "property_value": "1000",
             "property_description": "(m)",
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
@@ -295,8 +295,8 @@
             "is_active": true,
             "property_value": "150",
             "property_description": "(m)",
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
@@ -307,8 +307,8 @@
             "is_active": true,
             "property_value": "300",
             "property_description": "(m)",
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
@@ -319,8 +319,8 @@
             "is_active": true,
             "property_value": "15",
             "property_description": "(km)",
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
@@ -331,8 +331,8 @@
             "is_active": true,
             "property_value": "7",
             "property_description": "(km)",
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
@@ -343,8 +343,8 @@
             "is_active": true,
             "property_value": "10",
             "property_description": "(km)",
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
@@ -355,8 +355,8 @@
             "is_active": true,
             "property_value": "60",
             "property_description": "(dk)",
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
@@ -367,8 +367,8 @@
             "is_active": true,
             "property_value": "EO",
             "property_description": "",
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     },
     {
@@ -379,8 +379,8 @@
             "is_active": true,
             "property_value": "IR Kamera",
             "property_description": "",
-            "created_at": "2024-02-24T20:23:59Z",
-            "updated_at": "2024-02-24T20:23:59Z"
+            "created_at": "2024-02-26T09:24:38Z",
+            "updated_at": "2024-02-26T09:24:38Z"
         }
     }
 ]
