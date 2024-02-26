@@ -45,7 +45,7 @@ seed_data = [
     },
     {
         "model": "identity.user",
-        "pk": 1,
+        "pk": 2,
         "fields": {
             "is_active": True,
             "email": "default@example.com",

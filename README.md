@@ -78,6 +78,11 @@ docker ps
     - BackEnd: 
         <code>http://localhost:1337/api/</code>
         
+- Users
+  - Admin:
+    <code>email: admin@example.com - password: admin</code>
+  - Default: 
+    <code>email: default@example.com - password: default</code> 
 
 # Architecture
 
