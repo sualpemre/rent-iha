@@ -89,7 +89,7 @@ docker ps
 ![Wsl Open](assets/architecture.png)
 
 ## Example Database Diagram 
-![Wsl Open](assets/dbdiagram.png)
+![Wsl Open](assets/databasediagram.png)
 
 
 # How to install WSL on windows
