@@ -72,7 +72,7 @@ docker ps
 ```  
 ![alt text](assets/dockerps.png)
 
-- Open your browser:
+- Endpoints:
     - FrontEnd:
         <code>http://localhost:1337/</code>
     - BackEnd: 

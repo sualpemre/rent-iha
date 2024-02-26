@@ -52,8 +52,7 @@ INSTALLED_APPS = [
     'identity.apps.IdentityConfig',
     'aircraft.apps.AircraftConfig',
     "upload",
-    'rest_framework_simplejwt.token_blacklist',
-    'django_filters'
+    'rest_framework_simplejwt.token_blacklist'
 ]
 
 

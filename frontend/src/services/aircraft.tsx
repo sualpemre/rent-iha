@@ -22,3 +22,12 @@ export const SetAircraft = async (aircraft: any): Promise<AxiosResponse | null |
     return await sendRequest(`${API_URL}/aircraft/${aircraft.id}/?format=json`, RequestEnum.PUT, '', aircraft);
 }
 
+export const CreateIha = async (formData: any): Promise<AxiosResponse | null | any> => {
+    return await sendRequest(`${API_URL}/aircraft/?format=json`, RequestEnum.POST, '', formData);
+}
+
+
+export const FilterAircraft = async (value: any): Promise<AxiosResponse | null | any> => {
+    return await sendRequest(`${API_URL}/aircraft/?format=json&value=${value}`, RequestEnum.GET, '');
+}
+

@@ -10,7 +10,6 @@ const AdminLayout: React.FC<{ children: ReactNode }> = ({ children }) => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const navigate = useNavigate()
     const authcontext = useContext(AuthContext)
-    console.log(authcontext.user)
     if (authcontext.user?.role !== UserRole.Admin) {
         return navigate('/signin')
     }
