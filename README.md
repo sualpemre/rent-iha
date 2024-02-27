@@ -74,9 +74,13 @@ docker ps
 
 - Endpoints:
     - FrontEnd:
-        <code>http://localhost:1337/</code>
+        <code>http://localhost:1337/signin</code>
+        <code>http://localhost:1337/signup</code>
+        <code>http://localhost:1337/admin</code>   -> For Admin
+        <code>http://localhost:1337/dashboard</code> -> For Standart User
     - BackEnd: 
-        <code>http://localhost:1337/api/</code>
+        <code>http://localhost:1337/api/identity/</code>
+        <code>http://localhost:1337/api/aircraft/</code>
         
 - Users
   - Admin:
